@@ -1,0 +1,33 @@
+import Foundation
+
+var str = "Hello, playground"
+
+
+
+class Shoe:CustomStringConvertible {
+    
+    //Esto es una propiedad calculada
+    var description: String {
+        return "Shoe (color:  \(color) ,size: \(size) ,hasLaces: \(hasLaces)"
+    
+    }
+    
+    
+    let color: String
+    let size: Int
+    let hasLaces: Bool
+    
+    
+        init(color:String, size: Int, hasLaces: Bool) {
+        self.color = color
+        self.size = size
+        self.hasLaces = hasLaces
+    }
+}
+
+
+let nike = Shoe(color: "red", size: 7, hasLaces: true)
+
+//print(nike.color, nike.size, nike.hasLaces)
+
+print(nike)
